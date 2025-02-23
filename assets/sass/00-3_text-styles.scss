@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+	font-family: $repro-medium;
+	font-style: normal; font-weight: normal;
+}
+
+h5 {
+	font-family: $repro-medium;
+	@include font-size(14px, 16px);
+	letter-spacing: 0.005em;
+	line-height: 130%;
+}
+
+p {
+	font-family: $repro-medium;
+	@include font-size(14px, 18px);
+	letter-spacing: 0.005em;
+	line-height: 130%;
+	margin-bottom: 1.25em;
+}
+
+strong, b {
+	font-weight: normal;
+	color: $colour-white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	&:last-child { margin-bottom: 0px !important; }
+}
+
+@include portrait-mobile-devices {
+	h5, p { font-size: get-rem-mobile(14); }
+}
