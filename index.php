@@ -59,8 +59,8 @@
 				
 				<div class="hidden-content">
 					<div class="about-copy">
-						<p>We are a global digital twin consultancy. Partnering with visionary placemakers, we visualize complex data, stage immersive experiences, and deliver measurable value at every step of the lifecycle, from concepting to closing and beyond. </p>
-						<p>We are proven pioneers recognized as EPIC’s only Gold Standard Architecture, Engineering, and Construction (AEC) partner in North America. Through over 150 digital twin engagements, we have continually demonstrated mastery of leading-edge technologies, a sophisticated understanding of the complexity of developing destinations, and an ability to deliver excellence at scale.</p>
+						<p lang="en">We are a global digital twin consultancy. Partne&shy;ring with visionary placemakers, we visualize complex data, stage immersive experiences, and deliver measurable value at every step of the lifecycle, from concepting to closing and beyond. </p>
+						<p lang="en">We are proven pioneers recognized as EPIC’s only Gold Standard Architecture, Engineering, and Construction (AEC) partner in North America. Through over 150 digital twin engagements, we have continually demonstrated mastery of leading-edge technologies, a sophisticated understanding of the complexity of developing destinations, and an ability to deliver excellence at scale.</p>
 					</div>
 					
 					<img class="epic-logo" src="assets/svgs/epic-logo.svg" />
@@ -73,7 +73,7 @@
 			<div class="bottom-row">
 				<div class="column large">
 					<h5><a href="mailto:info@imerza.com">info@imerza.com</a></br>
-						+1 (0) 888-546 3792</h5>
+						<a href="tel:+1888-546-3792">+1 (0) 888-546 3792</a></h5>
 				</div>
 				<div class="column small">
 					<h5>Sarasota</br>

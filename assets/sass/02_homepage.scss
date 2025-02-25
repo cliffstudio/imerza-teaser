@@ -28,7 +28,7 @@ VIDEO BG ------------------
 		z-index: 20;
 		opacity: 0;
 		will-change: opacity;
-		transition: opacity 350ms cubic-bezier(0.25,0.1,0.25,1);
+		transition: opacity 450ms cubic-bezier(0.25,0.1,0.25,1) 100ms;
 	}
 	
 }
@@ -106,10 +106,17 @@ PAGE WRAP ------------------
 				opacity: 0;
 				pointer-events: none;
 				will-change: opacity;
-				transition: opacity 500ms cubic-bezier(0.25,0.1,0.25,1) 250ms;
+				transition: opacity 350ms cubic-bezier(0.25,0.1,0.25,1);
 			}
 			
-			.about-copy {}
+			.about-copy {
+				p { 
+					// word-break:break-word;
+					// hyphens: auto;
+					hyphens: manual;
+					word-wrap: break-word;
+				}
+			}
 			
 			//Epic Logo
 			img.epic-logo {
@@ -122,7 +129,7 @@ PAGE WRAP ------------------
 					max-height: 0px;
 					overflow: hidden;
 					will-change: opacity,max-height;
-					transition: opacity 600ms cubic-bezier(0.25,0.1,0.25,1) 350ms, max-height 400ms cubic-bezier(0.25,0.1,0.25,1);
+					transition: opacity 400ms cubic-bezier(0.25,0.1,0.25,1), max-height 800ms cubic-bezier(0.25,0.1,0.25,1) 350ms;
 				}
 				
 				//Epic Logo
@@ -145,7 +152,7 @@ PAGE WRAP ------------------
 			opacity: 0;
 			pointer-events: none;
 			will-change: transform,opacity;
-			transition: transform 350ms cubic-bezier(0.25,0.1,0.25,1) 150ms, opacity 350ms cubic-bezier(0.25,0.1,0.25,1) 150ms;
+			transition: transform 250ms cubic-bezier(0.25,0.1,0.25,1), opacity 250ms cubic-bezier(0.25,0.1,0.25,1);
 			// margin-top: get-rem-desktop(80);
 			
 			.column {
@@ -155,7 +162,7 @@ PAGE WRAP ------------------
 			
 			@media only screen and (max-width: 768px) {
 				margin-top: get-rem-mobile(64);
-				transition: transform 400ms cubic-bezier(0.25,0.1,0.25,1) 200ms, opacity 400ms cubic-bezier(0.25,0.1,0.25,1) 200ms;
+				transition: transform 200ms cubic-bezier(0.25,0.1,0.25,1), opacity 200ms cubic-bezier(0.25,0.1,0.25,1);
 				
 				.column {
 					&.large { width: 42.5%; }
@@ -172,7 +179,7 @@ PAGE WRAP ------------------
 			pointer-events: none;
 			padding-bottom: get-rem-desktop(20);
 			will-change: transform,opacity;
-			transition: transform 250ms cubic-bezier(0.25,0.1,0.25,1), opacity 250ms cubic-bezier(0.25,0.1,0.25,1);
+			transition: transform 350ms cubic-bezier(0.25,0.1,0.25,1) 150ms, opacity 350ms cubic-bezier(0.25,0.1,0.25,1) 150ms;
 			
 			@media only screen and (max-width: 768px) {
 				padding-bottom: get-rem-mobile(20);	
@@ -194,10 +201,16 @@ body.page-scrolled {
 	.video-background {
 		&:after {
 			opacity: 1;
+			transition: opacity 350ms cubic-bezier(0.25,0.1,0.25,1);
 		}	
 	}
 	
 	.page-wrap#home-page {
+		.logo-column {
+			img.logo {
+				cursor: pointer;
+			}
+		}
 		
 		.content-column {
 			
@@ -205,6 +218,7 @@ body.page-scrolled {
 				.hidden-content {
 					opacity: 1;
 					pointer-events: all;
+					transition: opacity 500ms cubic-bezier(0.25,0.1,0.25,1) 250ms;
 				}
 			}
 			
@@ -212,21 +226,30 @@ body.page-scrolled {
 				transform: translateY(0px);
 				opacity: 1;
 				pointer-events: all;
+				transition: transform 350ms cubic-bezier(0.25,0.1,0.25,1) 150ms, opacity 350ms cubic-bezier(0.25,0.1,0.25,1) 150ms;
 			}
 			
 			h5.scroll-prompt {
 				opacity: 0;
 				transform: translateY(100%);
+				transition: transform 250ms cubic-bezier(0.25,0.1,0.25,1), opacity 250ms cubic-bezier(0.25,0.1,0.25,1);
 			}
 			
 			@media only screen and (max-width: 768px) {
+				
 				.top-row {
 					.hidden-content {
 						opacity: 1;
 						pointer-events: all;
-						max-height: get-rem-mobile(350);
+						max-height: get-rem-mobile(320);
+						transition: opacity 600ms cubic-bezier(0.25,0.1,0.25,1) 350ms, max-height 400ms cubic-bezier(0.25,0.1,0.25,1);
 					}
 				}
+				
+				.bottom-row {
+					transition: transform 400ms cubic-bezier(0.25,0.1,0.25,1) 200ms, opacity 400ms cubic-bezier(0.25,0.1,0.25,1) 200ms;
+				}
+				
 			}
 			
 		}

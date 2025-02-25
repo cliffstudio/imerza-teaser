@@ -6,7 +6,17 @@
 
 document.addEventListener("DOMContentLoaded", function () {		
 	
+	
 	PageLoadFunctions();
+	
+	
+	//––CLICK FUNCTIONS
+	
+	
+	//Revert page back to beginning
+	$(document).on('click', 'body.page-scrolled .page-wrap#home-page .logo-column img.logo', function(e) {
+		pageScrolledUp();
+	});
 	
 });
 
@@ -20,23 +30,20 @@ function PageLoadFunctions() {
 	
 	//Media Lazyloading
 	mediaLazyloading();	
-	
-	//Page Scroll Function
-	function pageScrolled() {
-		$(document).off('wheel touchmove touchstart', pageScrolled);
-		$('body').addClass('page-scrolled');	
-	}
-	
+
 	//Mousewheel Function (to trigger page scroll on desktop)
 	$(document).on('wheel', function(event) {
-		console.log(Math.abs(event.originalEvent.deltaY));
+		let deltaY = event.originalEvent.deltaY;
 		
-		if (Math.abs(event.originalEvent.deltaY) > 27) {
-			
-			pageScrolled();
-			event.preventDefault(); 
-			
+		if (Math.abs(deltaY) > 27) { // Adjust sensitivity
+			if (deltaY > 0) {
+				pageScrolledDown();
+			} else {
+				pageScrolledUp();
+			}
+			event.preventDefault();
 		}
+		
 	});
 	
 	//Touch Functions (to trigger page scroll on mobiles)
@@ -50,11 +57,35 @@ function PageLoadFunctions() {
 		let endY = event.originalEvent.touches[0].clientY;
 		if (Math.abs(startY - endY) > 20) { // Adjust threshold
 			
-			pageScrolled();
+			pageScrolledDown();
 			
 		}
 	});
+	
+	$(document).on('touchmove', function(event) {
+		let endY = event.originalEvent.touches[0].clientY;
+		let deltaY = startY - endY;
+	
+		if (Math.abs(deltaY) > 20) { // Adjust sensitivity
+			if (deltaY > 0) {
+				pageScrolledDown();
+			} else {
+				pageScrolledUp();
+			}
+		}
+		
+	});
 
+}
+
+//––PAGE SCROLL FUNCTIONS
+
+function pageScrolledDown() {
+	$('body').addClass('page-scrolled');	
+}
+
+function pageScrolledUp() {
+	$('body').removeClass('page-scrolled');	
 }
 	
 //––LAZYLOADING
