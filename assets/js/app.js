@@ -55,15 +55,6 @@ function PageLoadFunctions() {
 	
 	$(document).on('touchmove', function(event) {
 		let endY = event.originalEvent.touches[0].clientY;
-		if (Math.abs(startY - endY) > 20) { // Adjust threshold
-			
-			pageScrolledDown();
-			
-		}
-	});
-	
-	$(document).on('touchmove', function(event) {
-		let endY = event.originalEvent.touches[0].clientY;
 		let deltaY = startY - endY;
 	
 		if (Math.abs(deltaY) > 20) { // Adjust sensitivity

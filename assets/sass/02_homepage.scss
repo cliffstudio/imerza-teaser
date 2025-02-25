@@ -129,7 +129,7 @@ PAGE WRAP ------------------
 					max-height: 0px;
 					overflow: hidden;
 					will-change: opacity,max-height;
-					transition: opacity 400ms cubic-bezier(0.25,0.1,0.25,1), max-height 800ms cubic-bezier(0.25,0.1,0.25,1) 350ms;
+					transition: opacity 400ms cubic-bezier(0.25,0.1,0.25,1), max-height 900ms cubic-bezier(0.25,0.1,0.25,1) 350ms;
 				}
 				
 				//Epic Logo
@@ -162,7 +162,7 @@ PAGE WRAP ------------------
 			
 			@media only screen and (max-width: 768px) {
 				margin-top: get-rem-mobile(64);
-				transition: transform 200ms cubic-bezier(0.25,0.1,0.25,1), opacity 200ms cubic-bezier(0.25,0.1,0.25,1);
+				transition: transform 300ms cubic-bezier(0.25,0.1,0.25,1) 100ms, opacity 300ms cubic-bezier(0.25,0.1,0.25,1) 100ms;
 				
 				.column {
 					&.large { width: 42.5%; }
@@ -184,6 +184,7 @@ PAGE WRAP ------------------
 			@media only screen and (max-width: 768px) {
 				padding-bottom: get-rem-mobile(20);	
 				color: rgba(255, 255, 255, 0.40);
+				transition: transform 380ms cubic-bezier(0.25,0.1,0.25,1) 280ms, opacity 380ms cubic-bezier(0.25,0.1,0.25,1) 280ms;
 			}
 			
 		}

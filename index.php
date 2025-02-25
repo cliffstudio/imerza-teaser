@@ -20,11 +20,11 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-<link rel="stylesheet" id="dist-style-css" href="dist/css/style.css?ver=1" type="text/css" media="all">
+<link rel="stylesheet" id="dist-style-css" href="dist/css/style.css?ver=3" type="text/css" media="all">
 <script type="text/javascript" src="assets/js/plugins/jquery.min.js" id="jquery-core-js"></script>
 <script type="text/javascript" src="assets/js/plugins/lazyload.min.js" id="lazyload-js"></script>
 <script type="text/javascript" src="assets/js/plugins/jquery.easing.min.js" id="easing-js"></script>
-<script type="text/javascript" src="dist/js/app.min.js?ver=1" id="app-js"></script>
+<script type="text/javascript" src="dist/js/app.min.js?ver=3" id="app-js"></script>
 <link rel="canonical" href="https://imerza.com">
 <link rel="shortlink" href="https://imerza.com">
 
