@@ -34,7 +34,7 @@
 
 <!--START VIDEO BG-->
 <div class="video-background">
-	<video class="lazy full-bleed-video" data-src="https://cliff-studio.b-cdn.net/imerza-bg_compressed.mp4" data-poster="assets/images/imerza-bg_compressed.webp" preload="auto" data-cookiescript="accepted" data-cookiecategory="functionality" loop muted webkit-playsinline="true" playsinline x5-playsinline autoplay crossorigin="anonymous"></video>
+	<video class="lazy full-bleed-video" data-src="https://cliff-studio.b-cdn.net/Imerza_Teaser_250225.mp4" data-poster="assets/images/imerza-bg_compressed.webp" preload="auto" data-cookiescript="accepted" data-cookiecategory="functionality" loop muted webkit-playsinline="true" playsinline x5-playsinline autoplay crossorigin="anonymous"></video>
 	<div class="video-placeholder" style="background-image:url('assets/images/imerza-bg_compressed.webp');"></div>	
 </div>
 <!--END VIDEO BG-->
